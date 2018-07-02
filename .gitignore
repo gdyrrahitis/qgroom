@@ -87,3 +87,6 @@ tmp/
 typings/
 report/
 test-results.xml
+
+.vscode/
+.cloud/

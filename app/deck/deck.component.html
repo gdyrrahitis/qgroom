@@ -1,0 +1,18 @@
+<ActionBar title="Deck" class="action-bar">
+    <NavigationButton android.systemIcon="ic_menu_preferences" text="Settings" (tap)="goToSettings()"></NavigationButton>
+</ActionBar>
+<GridLayout class="drawer-content">
+    <ListView [items]="cards" (itemTap)="onItemTap($event)" class="list-group">
+        <ng-template let-card="item" let-i="index" let-odd="odd" let-even="even">
+            <GridLayout class="list-group-item" columns="*,2*" rows="2*,3*" width="300" height="300">
+                <!-- <Label row="0" col="0" [text]="card.value"></Label>
+                <Label row="0" col="1" *ngIf="card.useWebFont" row="0" [text]="card.icon | fonticon" class="fa"></Label>
+                <Label row="0" col="1" *ngIf="!card.useWebFont && !card.unicode" row="0" text="{{card.value}}" class="fa"></Label>
+                <Label row="0" col="1" *ngIf="!card.useWebFont && card.unicode" row="0" text="{{card.unicode}}" class="fa"></Label> -->
+
+                <Label row="0" col="0" [text]="'fa-picture-o' | fonticon" class="fa"></Label>
+                <Label row="0" col="1" [text]="card.value" class="card-number list-group-item-heading"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

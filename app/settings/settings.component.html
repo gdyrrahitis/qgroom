@@ -1,0 +1,18 @@
+<ActionBar title="Settings" class="action-bar" *ngIf="canGoBack">
+    <NavigationButton android.systemIcon="ic_menu_back" text="Back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<Page>
+    <StackLayout class="p-l-15 p-r-15">
+        <StackLayout>
+            <StackLayout row="0">
+                <Label class="h1" text="Choose deck"></Label>
+            </StackLayout>
+            <ListPicker row="1" [items]="decks" 
+                selectedIndex="0"
+                (selectedIndexChange)="selectedIndexChanged($event)" class="picker">
+            </ListPicker>
+    
+            <Button text="Save" (tap)="onTap($event)"></Button>
+        </StackLayout>
+    </StackLayout>
+</Page>

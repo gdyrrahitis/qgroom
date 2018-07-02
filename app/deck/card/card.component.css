@@ -1,0 +1,9 @@
+.card {
+    font-size: 230;
+    border-radius: 4;
+    background-color: #fff;
+    box-shadow: 0 2 4 rgba(0, 0, 0, 0.18);
+    text-align: center;
+    vertical-align: center;
+    font-family: 'FontAwesome', 'fontawesome-webfont'
+}

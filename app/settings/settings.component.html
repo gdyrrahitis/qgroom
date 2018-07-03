@@ -4,7 +4,7 @@
     </ActionBar>
     <StackLayout class="p-l-15 p-r-15">
         <StackLayout>
-            <StackLayout row="0">
+            <StackLayout row="0" class="title">
                 <Label class="h1" text="Choose deck"></Label>
             </StackLayout>
             <ListPicker row="1" [items]="decks" selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event)" class="picker">

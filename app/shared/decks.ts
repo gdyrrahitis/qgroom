@@ -23,7 +23,7 @@ export const Fibonacci: Cards = [
     { id: 11, value: "Bomb", icon: 'fa-bomb', useWebFont: true, description: "Cannot be completed." }
 ];
 
-export const MountainGoat: Cards = [
+export const OtherSequence: Cards = [
     { id: 0, value: "0", description: "This task can be done instantly." },
     { id: 1, value: "1/2", description: "This task is very easy." },
     { id: 2, value: "1", description: "This task needs one unit." },

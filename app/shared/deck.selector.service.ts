@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Deck, Fibonacci, MountainGoat, Standard, Cards } from '~/shared/decks';
+import { Deck, Fibonacci, OtherSequence, Standard, Cards } from '~/shared/decks';
 
 const FibonacciDeck: Deck = {
-    name: "fibonacci",
+    name: "Fibonacci",
     cards: Fibonacci
 };
 
-const MountainGoatDeck: Deck = {
-    name: "mountain-goat",
-    cards: MountainGoat
+const OtherNumericSeqDeck: Deck = {
+    name: "Numeric sequence",
+    cards: OtherSequence
 };
 
 const StandardDeck: Deck = {
-    name: "standard",
+    name: "Standard",
     cards: Standard
 };
 
 const Decks: Deck[] = [
     StandardDeck,
     FibonacciDeck,
-    MountainGoatDeck
+    OtherNumericSeqDeck
 ];
 
 @Injectable()

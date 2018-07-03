@@ -1,3 +1,16 @@
 .card-number {
     font-size: 18;
 }
+
+/* .list-group-item-text {
+    font-size: 28;
+    font-weight: 400;
+    width: 100%;
+} */
+
+.bordered {
+    border-width: 1;
+    border-color: #333;
+    border-radius: 50%;
+    margin-right: 5;
+}

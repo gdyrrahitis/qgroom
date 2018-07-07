@@ -1,7 +1,7 @@
-<StackLayout [@state]="'in'" class="bordered" width="98" height="98" *ngFor="let card of cards" style.verticalAlignment="center" [label]>
-    <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="card.useWebFont" [text]="card.icon | fonticon" class="card fa text-center vertical-center"></Label>
-    <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="!card.useWebFont && !card.unicode" text="{{card.value}}"
+<StackLayout [@state]="'in'" class="bordered" width="98" height="98" *ngFor="let card of cards" style.verticalAlignment="center">
+    <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="card.useWebFont" [text]="card.icon | fonticon" class="card fa text-center vertical-center" label></Label>
+    <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="!card.useWebFont && !card.unicode" text="{{card.value}}" label
         class="card fa text-center vertical-center"></Label>
-    <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="!card.useWebFont && card.unicode" text="{{card.unicode}}"
+    <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="!card.useWebFont && card.unicode" text="{{card.unicode}}" label
         class="card fa text-center vertical-center"></Label>
 </StackLayout>

@@ -27,6 +27,6 @@ export class CardComponent implements OnInit {
     }
 
     public goBack() {
-        this.routerExtensions.backToPreviousPage();
+        this.routerExtensions.back();
     }
 }

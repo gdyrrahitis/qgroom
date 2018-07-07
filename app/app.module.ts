@@ -9,6 +9,7 @@ import { SettingsComponent } from "~/settings/settings.component";
 import { CardComponent } from "~/deck/card/card.component";
 import { DeckComponent } from "~/deck/deck.component";
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
+import { NativeScriptAnimationsModule } from "nativescript-angular/animations";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -22,6 +23,7 @@ import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
     ],
     imports: [
         NativeScriptModule,
+        NativeScriptAnimationsModule,
         AppRoutingModule,
         TNSFontIconModule.forRoot({
 			'fa': './css/font-awesome.min.css'

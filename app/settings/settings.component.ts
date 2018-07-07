@@ -48,10 +48,11 @@ export class SettingsComponent implements OnInit {
             this.deckService.setDeckTo(this.deck.name);
             this.router.navigate(["/deck"], {
                 transition: {
-                    name: "slideLeft",
-                    duration: 700,
-                    curve: "linear"
-                }
+                    name: "slideRight",
+                    duration: 300,
+                    curve: "ease"
+                },
+                clearHistory: true
             });
         } else {
             const options = {
@@ -65,6 +66,6 @@ export class SettingsComponent implements OnInit {
     }
 
     public goBack () {
-        this.router.backToPreviousPage();
+        this.router.back();
     }
 }

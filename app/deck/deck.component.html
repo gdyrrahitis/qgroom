@@ -1,12 +1,14 @@
 <ActionBar title="Voteshot" android.icon="res://icon" android.iconVisibility="always" class="action-bar">
     <ActionItem ios.systemIcon="2" android.systemIcon="ic_menu_preferences" ios.position="right" (tap)="goToSettings()"></ActionItem>
 </ActionBar>
-<ScrollView sdkExampleTitle sdkToggleNavButton>
+<ScrollView sdkExampleTitle sdkToggleNavButton class="m-t-20">
     <WrapLayout orientation="horizontal" height="auto" width="300">
-        <StackLayout class="bordered" width="90" height="90" *ngFor="let card of cards">
-            <Button (tap)="onItemTap(card.id)" width="90" height="90" *ngIf="card.useWebFont" [text]="card.icon | fonticon" class="btn btn-primary fa text-center vertical-center"></Button>
-            <Button (tap)="onItemTap(card.id)" width="90" height="90" *ngIf="!card.useWebFont && !card.unicode" text="{{card.value}}" class="btn btn-primary fa text-center vertical-center"></Button>
-            <Button (tap)="onItemTap(card.id)" width="90" height="90" *ngIf="!card.useWebFont && card.unicode" text="{{card.unicode}}" class="btn btn-primary fa text-center vertical-center"></Button>
+        <StackLayout [@state]="'in'" class="bordered" width="98" height="98" *ngFor="let card of cards">
+            <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="card.useWebFont" [text]="card.icon | fonticon" class="card fa text-center vertical-center"></Label>
+            <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="!card.useWebFont && !card.unicode" text="{{card.value}}"
+                class="card fa text-center vertical-center"></Label>
+            <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="!card.useWebFont && card.unicode" text="{{card.unicode}}"
+                class="card fa text-center vertical-center"></Label>
         </StackLayout>
     </WrapLayout>
 </ScrollView>

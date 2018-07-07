@@ -2,7 +2,7 @@
 	"description": "qGroom - Agile poker planning application",
 	"license": "SEE LICENSE IN LICENSE file",
 	"readme": "qGroom - Agile poker planning application",
-	"repository": "https://github.com/gdyrrahitis/voteshot",
+	"repository": "https://github.com/gdyrrahitis/qgroom",
 	"nativescript": {
 		"id": "org.nativescript.qGroom",
 		"tns-android": {

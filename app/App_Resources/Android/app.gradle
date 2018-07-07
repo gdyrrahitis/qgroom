@@ -8,7 +8,7 @@
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.voteshot"  
+    applicationId = "org.nativescript.qgroom"  
   }  
   aaptOptions {  
     additionalParameters "--no-version-vectors"  

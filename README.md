@@ -19,7 +19,7 @@ Just select your planning style. You are ready, just pick your estimation during
 #### Android
 | Deck  | Card  | Settings  |
 |---|---|---|
-|  <img alt="Android Deck" src="./images/ios_deck.png" width="200" />  | <img alt="Android Card" src="./images/ios_card.png" width="200" />   | <img alt="Android Settings" src="./images/ios_settings.png" width="200" />   |
+|  <img alt="Android Deck" src="./images/android_deck.jpeg" width="200" />  | <img alt="Android Card" src="./images/android_card.jpeg" width="200" />   | <img alt="Android Settings" src="./images/android_settings.jpeg" width="200" />   |
 
 ### License
 Apache License 2.0

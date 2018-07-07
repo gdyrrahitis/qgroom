@@ -22,6 +22,7 @@ Just select your planning style. You are ready, just pick your estimation during
 |  <img alt="Android Deck" src="./images/ios_deck.png" width="200" />  | <img alt="Android Card" src="./images/ios_card.png" width="200" />   | <img alt="Android Settings" src="./images/ios_settings.png" width="200" />   |
 
 ### License
+Apache License 2.0
 
 ### Acknowledgments
 Application icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>.</div>

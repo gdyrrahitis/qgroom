@@ -10,14 +10,14 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 */
 
-@import '~nativescript-theme-core/css/sky.css';
+@import '~nativescript-theme-core/css/core.light.css';
 * {
-    font-family: "Animated";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .fa {
     font-size: 24;
     padding: 10;
-    color: #ABBFC6;
+    color: #333;
     font-family: 'FontAwesome', 'fontawesome-webfont';
 }

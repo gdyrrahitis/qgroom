@@ -3,16 +3,21 @@ import { ListPicker } from "ui/list-picker";
 import { DecksService } from '~/shared/decks.service';
 import { Deck } from '~/shared/decks';
 import { RouterExtensions } from 'nativescript-angular/router';
+import { isAndroid, isIOS } from "platform";
 
 @Component({
     moduleId: module.id,
     selector: 'ns-settings',
-    templateUrl: './settings.component.html'
+    templateUrl: './settings.component.html',
+    styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
     private decks: Deck[];
     private deck: Deck;
     private canGoBack: boolean;
+    private selectedIndex: number = 0;
+    private _isAndroid: boolean = isAndroid;
+    private _isIos: boolean = isIOS;
 
     constructor(private deckService: DecksService,
         private router: RouterExtensions) {
@@ -29,12 +34,13 @@ export class SettingsComponent implements OnInit {
                     toString: () => d.name
                 };
             });
+        const name = this.deckService.getCurrentDeckName();
+        this.selectedIndex = this.decks.findIndex(d => d.name === name);
     }
 
     public selectedIndexChanged(args) {
         const picker = <ListPicker>args.object;
         this.deck = this.decks[picker.selectedIndex];
-
     }
 
     public onTap() {

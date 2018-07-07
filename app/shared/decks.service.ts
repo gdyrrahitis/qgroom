@@ -29,4 +29,8 @@ export class DecksService {
         const card = deck.find(c => c.id === id);
         return card;
     }
+
+    public getCurrentDeckName(): string {
+        return applicationSettings.getString(DECK);
+    }
 }

@@ -1,16 +1,20 @@
-<Page>
-    <ActionBar title="Settings" class="action-bar" *ngIf="canGoBack">
-        <NavigationButton android.systemIcon="ic_menu_back" text="Back" (tap)="goBack()"></NavigationButton>
-    </ActionBar>
-    <StackLayout class="p-l-15 p-r-15">
+<ActionBar title="Settings" class="action-bar" *ngIf="canGoBack">
+    <NavigationButton android.systemIcon="ic_menu_back" text="Back" (tap)="goBack()"></NavigationButton>
+    <ActionItem *ngIf="_isIos" ios.systemIcon="3" ios.position="right" (tap)="onTap()"></ActionItem>
+</ActionBar>
+<StackLayout>
+    <StackLayout>
         <StackLayout>
-            <StackLayout row="0" class="title">
-                <Label class="h1" text="Choose deck"></Label>
-            </StackLayout>
-            <ListPicker row="1" [items]="decks" selectedIndex="0" (selectedIndexChange)="selectedIndexChanged($event)" class="picker">
+            <ListPicker [items]="decks" [selectedIndex]="selectedIndex" (selectedIndexChange)="selectedIndexChanged($event)" class="picker">
             </ListPicker>
+        </StackLayout>
 
-            <Button text="Save" (tap)="onTap($event)"></Button>
+        <StackLayout class="title m-r-10 m-l-10">
+            <Label class="tex-muted" text="Choose one of the decks above to setup your default poker planning deck. You can always come back to the settings page and change your selection by choosing another deck."
+                textWrap="true"></Label>
         </StackLayout>
     </StackLayout>
-</Page>
+    <StackLayout *ngIf="_isAndroid">
+        <Button class="btn btn-primary" text="Save" (tap)="onTap()"></Button>
+    </StackLayout>
+</StackLayout>

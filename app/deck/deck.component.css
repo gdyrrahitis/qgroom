@@ -2,15 +2,17 @@
     font-size: 18;
 }
 
-/* .list-group-item-text {
-    font-size: 28;
-    font-weight: 400;
-    width: 100%;
-} */
-
 .bordered {
-    border-width: 1;
-    border-color: #333;
-    border-radius: 50%;
-    margin-right: 5;
+    margin: 5;
+    border-radius: 5;
+    box-shadow: inset 5 -5 34 -1 rgba(0,0,0,0.49);
+}
+
+.text-center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.vertical-center {
+    vertical-align: middle;
 }

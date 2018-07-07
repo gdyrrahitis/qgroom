@@ -2,6 +2,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { DecksService } from '~/shared/decks.service';
 import { Cards } from '~/shared/decks';
 import { RouterExtensions } from 'nativescript-angular/router';
+import { isAndroid, isIOS } from "platform";
+import { Page } from 'ui/page';
+
+const transition = isAndroid ? "fade": "curl";
 
 @Component({
     moduleId: module.id,
@@ -27,12 +31,11 @@ export class DeckComponent implements OnInit {
         this.cards = cards;
     }
 
-    public onItemTap(args: any): void {
-        const id = this.cards[args.index].id;
+    public onItemTap(id: number): void {
         this.router.navigate(["/card", id], {
             transition: {
-                name: "slideLeft",
-                duration: 700,
+                name: transition,
+                duration: 300,
                 curve: "linear"
             }
         });
@@ -41,8 +44,8 @@ export class DeckComponent implements OnInit {
     public goToSettings() {
         this.router.navigate(["/settings"], {
             transition: {
-                name: "slideLeft",
-                duration: 700,
+                name: transition,
+                duration: 300,
                 curve: "linear"
             }
         });

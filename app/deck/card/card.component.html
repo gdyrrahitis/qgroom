@@ -2,7 +2,10 @@
     <NavigationButton android.systemIcon="ic_menu_back" text="Back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
 <GridLayout rows="*" columns="*">
-    <Label *ngIf="card.useWebFont" row="0" [text]="card.icon | fonticon" class="card" style.verticalAlignment="center" style.textAlignment="center"></Label>
-    <Label *ngIf="!card.useWebFont && !card.unicode" row="0" text="{{card.value}}" class="card" style.verticalAlignment="center" style.textAlignment="center"></Label>
-    <Label *ngIf="!card.useWebFont && card.unicode" row="0" text="{{card.unicode}}" class="card" style.verticalAlignment="center" style.textAlignment="center"></Label>
+    <Label [@twinkle]="twinkleState" *ngIf="card.useWebFont" row="0" [text]="card.icon | fonticon" class="card" style.verticalAlignment="center" (tap)="onItemTap()"
+        style.textAlignment="center"></Label>
+    <Label [@twinkle]="twinkleState" *ngIf="!card.useWebFont && !card.unicode" row="0" text="{{card.value}}" class="card" style.verticalAlignment="center" (tap)="onItemTap()"
+        style.textAlignment="center"></Label>
+    <Label [@twinkle]="twinkleState" *ngIf="!card.useWebFont && card.unicode" row="0" text="{{card.unicode}}" class="card" style.verticalAlignment="center" (tap)="onItemTap()"
+        style.textAlignment="center"></Label>
 </GridLayout>

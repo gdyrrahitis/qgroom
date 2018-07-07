@@ -10,6 +10,7 @@ import { CardComponent } from "~/deck/card/card.component";
 import { DeckComponent } from "~/deck/deck.component";
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 import { NativeScriptAnimationsModule } from "nativescript-angular/animations";
+import { DeckDetailsComponent } from "~/deck/details/deck.component.details";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -33,7 +34,8 @@ import { NativeScriptAnimationsModule } from "nativescript-angular/animations";
         AppComponent,
         SettingsComponent,
         CardComponent,
-        DeckComponent
+        DeckComponent,
+        DeckDetailsComponent
     ],
     providers: [
         DecksService,

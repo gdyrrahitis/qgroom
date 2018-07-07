@@ -3,12 +3,6 @@
 </ActionBar>
 <ScrollView sdkExampleTitle sdkToggleNavButton class="m-t-20">
     <WrapLayout orientation="horizontal" height="auto" width="300">
-        <StackLayout [@state]="'in'" class="bordered" width="98" height="98" *ngFor="let card of cards">
-            <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="card.useWebFont" [text]="card.icon | fonticon" class="card fa text-center vertical-center"></Label>
-            <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="!card.useWebFont && !card.unicode" text="{{card.value}}"
-                class="card fa text-center vertical-center"></Label>
-            <Label (tap)="onItemTap(card.id)" width="98" height="98" *ngIf="!card.useWebFont && card.unicode" text="{{card.unicode}}"
-                class="card fa text-center vertical-center"></Label>
-        </StackLayout>
+        <ns-deck-details width="98" height="98" [cards]="cards" (onCardTap)="onItemTap($event)" width="98" height="98"></ns-deck-details>
     </WrapLayout>
 </ScrollView>

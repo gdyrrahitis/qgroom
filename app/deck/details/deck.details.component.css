@@ -1,0 +1,16 @@
+.bordered {
+    margin: 1;
+    border-radius: 5;
+    box-shadow: inset 5 -5 34 -1 rgba(0,0,0,0.49);
+    background-color: #eee;
+    opacity: 0;
+}
+
+.text-center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.vertical-center {
+    vertical-align: middle;
+}

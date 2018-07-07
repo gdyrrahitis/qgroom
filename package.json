@@ -1,10 +1,10 @@
 {
-	"description": "NativeScript Application",
-	"license": "SEE LICENSE IN <your-license-filename>",
-	"readme": "NativeScript Application",
-	"repository": "<fill-your-repository-here>",
+	"description": "qGroom - Agile poker planning application",
+	"license": "SEE LICENSE IN LICENSE file",
+	"readme": "qGroom - Agile poker planning application",
+	"repository": "https://github.com/gdyrrahitis/voteshot",
 	"nativescript": {
-		"id": "org.nativescript.voteshot",
+		"id": "org.nativescript.qGroom",
 		"tns-android": {
 			"version": "4.1.3"
 		},

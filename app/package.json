@@ -3,6 +3,6 @@
     "v8Flags": "--expose_gc"
   },
   "main": "main.js",
-  "name": "tns-template-hello-world-ng",
+  "name": "tns-qgroom-ng",
   "version": "4.1.0"
 }
